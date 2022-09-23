@@ -1,0 +1,79 @@
+<mvc:View controllerName="projectoholamundo.controller.Page2" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    <Page id="page2" title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <Text id="_IDGenText1" textAlign="Center" text="Página 2" />
+            <HBox class="sapUiMediumMarginBegin sapUiMediumMarginEnd">
+                <Table id="idTable">
+                    <columns>
+                        <Column id="col1" hAlign="Center">
+                            <Label text="Columna 1" />
+                        </Column>
+                        <Column id="col2" hAlign="Center">
+                            <Label text="Columna 2" />
+                        </Column>
+                        <Column id="col3" hAlign="Center">
+                            <Label text="Columna 3" />
+                        </Column>
+                        <Column id="col4" hAlign="Center">
+                            <Label text="Columna 4" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="Registro A" />
+                                <Text text="Registro B" />
+                                <Text text="Registro C" />
+                                <Text text="Registro D" />
+                            </cells>
+                        </ColumnListItem>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="Registro E" />
+                                <Text text="Registro F" />
+                                <Text text="Registro G" />
+                                <Text text="Registro H" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </HBox>
+            <HBox class="sapUiMediumMarginBegin sapUiMediumMarginEnd">
+            <Table id="idTable2"  items="{/Invoices}" growing="true" growingScrollToLoad="true" growingThreshold="10">
+                    <columns>
+                        <Column id="ShipName" hAlign="Center">
+                            <Label text="Columna 1" />
+                        </Column>
+                        <Column id="ShipAddress" hAlign="Center">
+                            <Label text="Columna 2" />
+                        </Column>
+                        <Column id="ShipCity" hAlign="Center">
+                            <Label text="Columna 3" />
+                        </Column>
+                        <Column id="Country" hAlign="Center">
+                            <Label text="Columna 4" />
+                        </Column>
+                        <Column id="PostalCode" hAlign="Center">
+                            <Label text="Columna 5" />
+                        </Column>
+                        <Column id="UnitPrice" hAlign="Center">
+                            <Label text="Columna 6" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{ShipName}" />
+                                <Text text="{ShipAddress}" />
+                                <Text text="{ShipCity}" />
+                                <Text text="{Country}" />
+                                <Text text="{PostalCode}" />
+                                <Text text="{UnitPrice}" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>

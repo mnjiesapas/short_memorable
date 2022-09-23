@@ -1,0 +1,56 @@
+<mvc:View controllerName="projectoholamundo.controller.Main" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Text id="_IDGenText1" textAlign="Center" class="claseCss" text="Lorem ipsum dolor st amet" />
+            <TextArea id="_IDGenTextArea1" value="Lorem ipsum dolor st amet, consetetur sadipscing elitr" rows="8" />
+            <HBox id="_IDGenHBox1">
+                <Button id="_IDGenButton1" text="{i18n>boton}" />
+            </HBox>
+            <Input id="_IDGenInput1" value="Valor predeterminado" class="sapUiSmallMarginTopBottom" />
+            <CheckBox id="_IDGenCheckBox1" text="{i18n>_IDGenCheckBox1}" valueState="Warning" select="onSelect" />
+            <HBox id="_IDGenHBox2">
+                <Label id="_IDGenLabel1" text="{i18n>_IDGenLabel1}" labelFor="_IDGenInput2" class="sapUiTinyMarginTop sapUiTinyMarginBeginEnd" />
+                <Input id="_IDGenInput2" />
+                <Button id="_IDGenButton2" text="{i18n>_IDGenButton2}" press="onPress" />
+                <CheckBox id="_IDGenCheckBox2" text="{i18n>_IDGenCheckBox2}" selected="true" select="onSelect" />
+            </HBox>
+            <HBox id="_IDGenHBox3">
+                <Label id="_IDGenLabel2" text="{i18n>_IDGenLabel2}" labelFor="_IDGenInput3" />
+                <Input id="_IDGenInput3" />
+                <Button id="_IDGenButton3" text="{i18n>_IDGenButton3}" press="onPress" />
+            </HBox>
+            <HBox id="_IDGenHBox4">
+                <Button id="_IDGenButton4" text="{i18n>_IDGenButton4}" press="onPress2" />
+                <Select id="slCountry2" selectedKey="{pacoModel>/userDataSelected}" items="{pacoModel>/userData}">
+                    <items>
+                        <core:Item id="_IDGenItem12" key="{pacoModel>key}" text="{pacoModel>nombre}" />
+                    </items>
+                </Select>
+            </HBox>
+            <!--Navegacion estática-->
+            <Button id="_IDGenButton5" text="Navegar" press="onNavegate" />
+            <!--Navegacion con parametros-->
+            <Button id="_IDGenButton6" text="Navegar con parametros" press="onNavegateWithParams" />
+            <HBox>
+                <u:FileUploader
+                    id="fileUploader"
+                    name="myFileUpload"
+                    uploadUrl="upload/"
+                    tooltip="Upload your file to the local server"
+                    uploadComplete="handleUploadComplete"
+                    change="handleValueChange"
+                    typeMissmatch="handleTypeMissmatch"
+                    style="Emphasized"
+                    fileType="txt,jpg,xml"
+                    placeholder="Choose a file for Upload...">
+                    <u:parameters>
+                        <u:FileUploaderParameter name="Accept-CH" value="Viewport-Width" />
+                        <u:FileUploaderParameter name="Accept-CH" value="Width" />
+                        <u:FileUploaderParameter name="Accept-CH-Lifetime" value="86400" />
+                    </u:parameters>
+                </u:FileUploader>
+                <Button text="Upload File" press="handleUploadPress" />
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>
