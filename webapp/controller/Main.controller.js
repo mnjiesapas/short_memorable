@@ -20,6 +20,7 @@ sap.ui.define([
             handleRouteMatched: function(){
                 // para recoger el i18n
                 this.f_i18n();
+                console.log("Hola Mbye que tal?");
                 this.i18n = this.getView().getModel("i18n").getResourceBundle();
         
                 var oModelPaco =  {
